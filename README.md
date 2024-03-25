@@ -11,7 +11,9 @@ In any case, the result is a list of all the open variables. I then used `filter
 ### More Test Cases
 I highly doubt the six test cases I wrote to aid in development have caught every edge case. I want to write a couple tests that are just really large because I think having more variables to keep track of will be an effective stress test. I also suspect that if I shadow enough variables, eventually something will break, so I think making larger programs with more shadowed variables will help me expose that.
 I'm having a hard time thinking through what the edge cases will be. I'll give it more thought and do some reading, and I think more test cases will help expose some of them.
-### Multi-Fun
+### More Basic Operaions
+I do have loose plans to add things like greater than, less than, and possible if-else statements. I just think it would be cool to have built it all from the ground up. I wanted to touch bases and see if this solution was at all feasible before I added too many cases though. I also will be changing the Environment to accomodate recursion, so I'll do that too before I add too many cases. 
+### Multi Function Call
 This should be a pretty easy fix. I just need to change the filter statement to filter out anything within a list of parameters. I wanted to start simple, but this should be an easy fix.
 ### Currying
 Currying just worked in problem set 6, so theoretically it just works here. I haven't explicitly tested it though, I'll do that moving forward.
