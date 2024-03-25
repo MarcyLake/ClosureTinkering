@@ -20,5 +20,6 @@ This interpreter does not support recursive calls. I started this before we lear
 ### Refactoring
 This is a neat solution, but it's far from perfect. Having a recursive function (`eval`) that calls another recurisve function (`parse`) takes up a lot of space and time. Recursion was definitely the easiest way to write parse, but if it's possible to write it with tail-recursion or a loop, that might be faster. I need to do some investigating.
 The work is also currently divided between `parse` and `eval` in that `parse` creates a list and then `eval` filters it. This works fine, except for within the `Let` case where it gets a little strange (there's a comment in the code). I want to keep an eye on this as I expand the interpreter and see if it ever becomes faster or more convenient to pass the parameter into `parse` and have it do the filtering. I'm not sure if it will make a difference either way, but it is something to keep an eye on.
-
+### Research
+I also hope to do more research and reading into this topic. I feel that I've traded the space inefficiency of closures for a massive time inefficiency. This means that I've either wrote the solution badly, or picked the wrong solution. If I were to start the solution over and make myself start somewhere other than 'FunDef' I'm not sure where I would start. It's possible that simply changing the enviroment we use in some way could also do this, but I'm not sure what that would look like. I'll keep looking into it though!
 
